@@ -14,7 +14,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
         <a class="navbar-brand text-white" href="#">Marzuki</a>
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
           <li class="nav-item">
             <a class="nav-link text-white" href="#">Home</a>
           </li>
