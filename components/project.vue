@@ -75,6 +75,13 @@ export default {
           img: "agenpru.png",
           tags: ["JAVASCRIPT", "NUXTJS"],
         },
+        {
+          name: "Aplikasi Sistem Inventory Barang",
+          desc:
+            "Aplikasi ini digunakan untuk mengelelola transaksi pemakaian dan pengembalian barang.",
+          img: "inventory.png",
+          tags: ["PHP", "LARAVEL", "BOOTSTRAP"],
+        },
       ],
       projectdesc: "project-desc",
     };

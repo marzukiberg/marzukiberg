@@ -65,7 +65,7 @@ export default {
         },
         {
           name: "Bootstrap",
-          width: "60%",
+          width: "80%",
         },
         {
           name: "PHP",
@@ -73,15 +73,15 @@ export default {
         },
         {
           name: "Javascript",
-          width: "60%",
+          width: "70%",
         },
         {
           name: "Codeigniter",
-          width: "60%",
+          width: "70%",
         },
         {
           name: "Laravel",
-          width: "40%",
+          width: "70%",
         },
         {
           name: "React",
@@ -89,15 +89,15 @@ export default {
         },
         {
           name: "React Native",
-          width: "50%",
+          width: "60%",
         },
         {
           name: "Vue",
-          width: "25%",
+          width: "40%",
         },
         {
           name: "Nuxt",
-          width: "35%",
+          width: "70%",
         },
       ],
       skills: [],
