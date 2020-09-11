@@ -1,6 +1,6 @@
 <template>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top gradient">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top header__nav">
       <button
         class="navbar-toggler bg-white"
         type="button"
@@ -39,9 +39,9 @@
         </ul>
       </div>
     </nav>
-    <div class="jumbotron jumbotron-fluid mb-2 gradient">
+    <div class="jumbotron jumbotron-fluid mb-2 header__jumbotron">
       <div class="container d-flex flex-column text-center">
-        <img src="/images/profil.jpg" alt class="img-circle mx-auto d-block" />
+        <img src="/images/profil.jpg" alt class="img-circle mx-auto d-block header__jumbotronImage" />
         <h1 class="text-white">Marzuki</h1>
         <h5 class="text-white" style="font-weight: 300;">Web Developer</h5>
         <br />
@@ -49,3 +49,18 @@
     </div>
   </header>
 </template>
+
+<style scoped>
+.header__nav {
+  background-image: linear-gradient(to right, #3a7bd5, #4ca1af);
+}
+.header__jumbotron {
+  padding-top: 100px;
+  background-image: linear-gradient(to right, #3a7bd5, #4ca1af);
+}
+.header__jumbotronImage {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+</style>

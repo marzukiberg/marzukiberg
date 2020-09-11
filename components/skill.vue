@@ -2,7 +2,7 @@
   <section class="col-12 py-5 lax" data-lax-preset="fadeIn" id="skill">
     <div class="row">
       <div class="col-md-4 d-flex justify-content-center align-items-center">
-        <img src="images/skill.png" alt="Skill" class="img-fluid d-block mx-auto w-100" />
+        <img src="images/skill.png" alt="Skill" class="d-block mx-auto skill__image" />
       </div>
       <div class="col-md-8">
         <h2 class="text-primary">#Skills</h2>
@@ -21,7 +21,7 @@
             </div>
           </li>
           <a
-            class="btn btn-primary rounded-circle gradient float-right btn-more"
+            class="btn btn-primary rounded-circle skill__expandButton float-right btn-more"
             data-toggle="collapse"
             href="#collapsedskills"
             role="button"
@@ -120,7 +120,16 @@ export default {
 };
 </script>
 
-  <style scoped>
+<style scoped>
+ul > li {
+  list-style: none;
+}
+.skill__expandButton {
+  background-image: linear-gradient(to right, #3a7bd5, #4ca1af);
+}
+.skill__image {
+  width: 100%;
+}
 .btn-more {
   height: 50px;
   width: 50px;
@@ -137,5 +146,20 @@ export default {
   background-color: white;
   color: #3a7bd5;
   box-shadow: 0 0 5px #3a7bd5;
+}
+.collapse > li {
+  list-style: none;
+}
+
+@media (max-width: 600px) {
+  .skill__image {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .skill__image {
+    width: 80%;
+  }
 }
 </style>

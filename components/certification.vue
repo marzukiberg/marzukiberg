@@ -5,7 +5,7 @@
         <img
           src="images/certificate.png"
           alt="Certification"
-          class="img-fluid d-block mx-auto w-100"
+          class="d-block mx-auto certification__image"
         />
       </div>
       <div class="col-md-8">
@@ -53,3 +53,22 @@ export default {
   },
 };
 </script>
+
+
+<style>
+.certification__image {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .certification__image {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .certification__image {
+    width: 80%;
+  }
+}
+</style>

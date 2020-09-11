@@ -1,13 +1,13 @@
 <template>
-  <section class="col-12 py-5 lax" data-lax-preset="fadeIn " id="education">
+  <section class="col-12 py-5" id="education">
     <div class="row">
       <div class="col-md-4 d-flex justify-content-center align-items-center">
-        <img src="images/education.png" alt="Education" class="img-fluid d-block mx-auto w-100" />
+        <img src="images/education.png" alt="Education" class="d-block mx-auto education__image" />
       </div>
       <div class="col-md-8">
         <h2 class="text-primary">#Education</h2>
         <ul class="list-group">
-          <li class="list-group-item myhover" v-for="i in educations">
+          <li class="list-group-item education__list" v-for="i in educations">
             <span :class="`badge badge-${i.finish==='Sekarang'?'primary':'success'}`">{{i.start}}</span> -
             <span :class="`badge badge-${i.finish==='Sekarang'?'primary':'success'}`">{{i.finish}}</span>
             <h3>{{i.name}}</h3>
@@ -48,3 +48,26 @@ export default {
   },
 };
 </script>
+
+<style>
+.education__list:hover {
+  background-color: white;
+  box-shadow: 0 0 5px silver;
+  transition: 0.3s;
+}
+.education__image {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .education__image {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .education__image {
+    width: 80%;
+  }
+}
+</style>
