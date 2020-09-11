@@ -1,5 +1,5 @@
 <template>
-  <section class="col-12 py-5 lax" data-lax-preset="fadeIn" id="certifications">
+  <section class="col-12 py-5" id="certifications">
     <div class="row">
       <div class="col-md-4 d-flex justify-content-center align-items-center">
         <img

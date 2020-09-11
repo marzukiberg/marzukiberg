@@ -25,7 +25,7 @@ export default {
       }
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      { rel: "icon", type: "image/jpg", href: "/images/profil.jpg" },
       {
         rel: "stylesheet",
         href:

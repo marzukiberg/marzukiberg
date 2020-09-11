@@ -1,5 +1,5 @@
 <template>
-  <section class="col-12 py-5 lax" data-lax-preset="fadeIn" id="about">
+  <section class="col-12 py-5" id="about">
     <div class="row no-gutters">
       <div class="col-md-4 d-flex justify-content-center align-items-center">
         <img src="images/about.png" alt="About" class="d-block mx-auto about__image" />
