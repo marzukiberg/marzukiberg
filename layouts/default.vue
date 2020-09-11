@@ -8,14 +8,18 @@
 export default {
   head: {
     title: "Welcome to my Portofolio | MARZUKI",
+    link: [
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap",
+      },
+    ],
     script: [{ src: "https://kit.fontawesome.com/79bb9df689.js" }],
   },
 };
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-
 * {
   margin: 0;
   padding: 0;

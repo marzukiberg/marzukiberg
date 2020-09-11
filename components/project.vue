@@ -98,6 +98,12 @@ export default {
           img: "inventory.png",
           tags: ["PHP", "LARAVEL", "BOOTSTRAP"],
         },
+        {
+          id: 9,
+          name: "Amazon Clone ReactJS",
+          img: "amazon-clone.png",
+          tags: ["JAVASCRIPT", "REACTJS"],
+        },
       ],
       projectdesc: "project-desc",
     };
