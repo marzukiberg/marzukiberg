@@ -122,6 +122,13 @@ export default {
           tags: ["JAVASCRIPT", "REACTJS"],
           link: "https://whatsapp-clone-marzukiberg.vercel.app/",
         },
+        {
+          id: 11,
+          name: "Photo Filter ReactJS",
+          img: "photo-filter-react.png",
+          tags: ["JAVASCRIPT", "REACTJS"],
+          link: "https://photo-filter-react.vercel.app/",
+        },
       ],
       projectdesc: "project-desc",
     };
