@@ -76,6 +76,10 @@ export default {
           width: "70%",
         },
         {
+          name: "Git",
+          width: "60%",
+        },
+        {
           name: "Codeigniter",
           width: "70%",
         },
@@ -85,7 +89,7 @@ export default {
         },
         {
           name: "React",
-          width: "50%",
+          width: "65%",
         },
         {
           name: "React Native",
