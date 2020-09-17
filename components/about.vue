@@ -11,7 +11,9 @@
           <br />Saya seorang Web dan Mobile Developer. Saya menguasai bahasa pemrograman PHP dan Javascript, saya juga mampu menggunakan dengan baik framework-framework seperti Codeigniter, Laravel, ReactJS, React Native, NuxtJS, dan NodeJS.
         </p>
 
-        <button class="btn btn-flat btn-primary about__button">Hire Me!</button>
+        <a href="#contacts" class="btn btn-flat btn-primary about__button">Hire Me!</a>
+        <b class="mx-2">OR SEE</b>
+        <a href="#projects" class="btn btn-flat btn-primary about__button">My Portofolio</a>
       </div>
     </div>
   </section>

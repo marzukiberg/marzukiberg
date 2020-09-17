@@ -1,5 +1,5 @@
 <template>
-  <section class="col-12 py-5">
+  <section class="col-12 py-5" id="contacts">
     <div class="text-center">
       <img src="/images/contacts.png" alt="Contact Image" class="d-block mx-auto contact__image" />
     </div>

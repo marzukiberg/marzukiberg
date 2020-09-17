@@ -10,20 +10,22 @@
     <h2 class="text-primary">#Projects</h2>
     <div class="row text-center">
       <div class="col-md-4 col-sm-6" v-for="i in projects">
-        <div class="card my-3 mx-1 project__card">
-          <img
-            :src="'images/projects/'+i.img"
-            class="card-img-top project__image"
-            alt="Project Image"
-          />
-          <div class="card-body project-cb">
-            <h5 class="card-title">{{i.name}}</h5>
+        <a :href="i.link" class="project__link" target="_blank">
+          <div class="card my-3 mx-1 project__card">
+            <img
+              :src="'images/projects/'+i.img"
+              class="card-img-top project__image"
+              alt="Project Image"
+            />
+            <div class="card-body project-cb">
+              <h5 class="card-title">{{i.name}}</h5>
 
-            <div class="d-inline" v-for="j in i.tags">
-              <span class="badge badge-primary">#{{j}}</span>&nbsp;
+              <div class="d-inline" v-for="j in i.tags">
+                <span class="badge badge-primary">#{{j}}</span>&nbsp;
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
@@ -41,6 +43,7 @@ export default {
             "Aplikasi ini digunakan untuk mengelola surat masuk dan surat keluar dengan fitur meliputi kelola data surat masuk dan surat keluar, disposisi surat masuk, dan laporan surat.",
           img: "arsipsurat.png",
           tags: ["PHP", "CODEIGNITER", "BOOTSTRAP"],
+          link: "http://e-arsip-smkdh.epizy.com",
         },
         {
           id: 2,
@@ -49,6 +52,7 @@ export default {
             "Aplikasi ini bertujuan untuk menampilkan informasi mengenai jadwal ruangan serta memungkinkan pengguna untuk melakukan peminjaman ruangan, data yang dapat dikelola admin yaitu kelola data ruangan, anggota, permintaan peminjaman, jadwal, dan data admin.",
           img: "siplab.png",
           tags: ["PHP", "CODEIGNITER", "BOOTSTRAP"],
+          link: "#",
         },
         {
           id: 3,
@@ -57,6 +61,7 @@ export default {
             "Aplikasi ini digunakan untuk mengelola data obat di apotek, serta pembelian dan penjualannya.",
           img: "apotek.png",
           tags: ["PHP", "CODEIGNITER", "BOOTSTRAP"],
+          link: "#",
         },
         {
           id: 4,
@@ -65,6 +70,7 @@ export default {
             " Web Portofolio Dinamis Sederhana, portofolio ini dinamis dan pengguna dapat dengan mudah mengganti info sewaktu-waktu seperti mengubah tentang, menambah keahlian, history pendidikan, pencapaian, dll.",
           img: "portofolio.png",
           tags: ["PHP", "BOOTSTRAP"],
+          link: "#",
         },
         {
           id: 5,
@@ -73,6 +79,7 @@ export default {
             " Sistem ini memungkinkan para pekerja memberikan keluhan kepada atasan, admin akan memberikan verifikasi jika keluhan sudah diselesaikan dan notifikasi akan sampai kepada para pekerja.",
           img: "pengaduan.png",
           tags: ["PHP", "BOOTSTRAP"],
+          link: "#",
         },
         {
           id: 6,
@@ -81,6 +88,7 @@ export default {
             "Website ini dibuat untuk mengelola profile dari rumah sakit, dengan adanya fitur admin panel dapat memudahkan admin mengubah atau menambah informasi pada website sewaktu-waktu.",
           img: "rsmadani.png",
           tags: ["PHP", "CODEIGNITER", "BOOTSTRAP"],
+          link: "#",
         },
         {
           id: 7,
@@ -89,6 +97,7 @@ export default {
             "Website ini dibuat menggunakan NuxtJS, bertujuan untuk mempromosikan bisnis asuransi oleh Prudential.",
           img: "agenpru.png",
           tags: ["JAVASCRIPT", "NUXTJS"],
+          link: "https://al-ikhsanprusyariah.now.sh",
         },
         {
           id: 8,
@@ -97,12 +106,21 @@ export default {
             "Aplikasi ini digunakan untuk mengelelola transaksi pemakaian dan pengembalian barang.",
           img: "inventory.png",
           tags: ["PHP", "LARAVEL", "BOOTSTRAP"],
+          link: "#",
         },
         {
           id: 9,
           name: "Amazon Clone ReactJS",
           img: "amazon-clone.png",
           tags: ["JAVASCRIPT", "REACTJS"],
+          link: "https://challenge-a6438.web.app/",
+        },
+        {
+          id: 10,
+          name: "Whatsapp Clone ReactJS",
+          img: "whatsapp-clone.png",
+          tags: ["JAVASCRIPT", "REACTJS"],
+          link: "https://whatsapp-clone-marzukiberg.vercel.app/",
         },
       ],
       projectdesc: "project-desc",
@@ -133,6 +151,15 @@ export default {
   height: 200px;
   object-fit: cover;
   object-position: center top;
+}
+
+.project__link {
+  color: black;
+}
+.project__link:hover {
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
 }
 
 @media (max-width: 600px) {
