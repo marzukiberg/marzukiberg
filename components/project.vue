@@ -136,6 +136,13 @@ export default {
           tags: ["JAVASCRIPT"],
           link: "https://javascript-piano-nu.vercel.app/",
         },
+        {
+          id: 13,
+          name: "Send to WhatsApp",
+          img: "send2whatsapp.png",
+          tags: ["JAVASCRIPT"],
+          link: "https://send2whatsapp.now.sh/"
+        }
       ],
       projectdesc: "project-desc",
     };
