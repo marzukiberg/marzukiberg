@@ -129,6 +129,13 @@ export default {
           tags: ["JAVASCRIPT", "REACTJS"],
           link: "https://photo-filter-react.vercel.app/",
         },
+        {
+          id: 12,
+          name: "Javascript Piano",
+          img: "javascript-piano.png",
+          tags: ["JAVASCRIPT"],
+          link: "https://javascript-piano-nu.vercel.app/",
+        },
       ],
       projectdesc: "project-desc",
     };
