@@ -13,15 +13,16 @@
         <a :href="i.link" class="project__link" target="_blank">
           <div class="card my-3 mx-1 project__card">
             <img
-              :src="'images/projects/'+i.img"
+              :src="'images/projects/' + i.img"
               class="card-img-top project__image"
               alt="Project Image"
             />
             <div class="card-body project-cb">
-              <h5 class="card-title">{{i.name}}</h5>
+              <h5 class="card-title">{{ i.name }}</h5>
 
               <div class="d-inline" v-for="j in i.tags">
-                <span class="badge badge-primary">#{{j}}</span>&nbsp;
+                <span class="badge badge-primary">#{{ j }}</span
+                >&nbsp;
               </div>
             </div>
           </div>
@@ -142,6 +143,13 @@ export default {
           img: "send2whatsapp.png",
           tags: ["JAVASCRIPT"],
           link: "https://send2whatsapp.now.sh/"
+        },
+        {
+          id: 14,
+          name: "Codepen Clone",
+          img: "codepen-clone.png",
+          tags: ["JAVASCRIPT", "REACTJS"],
+          link: "https://codepen-clone.vercel.app/"
         }
       ],
       projectdesc: "project-desc",
