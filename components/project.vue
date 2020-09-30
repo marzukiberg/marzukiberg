@@ -10,7 +10,11 @@
     <h2 class="text-primary">#Projects</h2>
     <div class="row text-center">
       <div class="col-md-4 col-sm-6" v-for="i in projects">
-        <a :href="i.link" class="project__link" target="_blank">
+        <a
+          :href="i.link"
+          class="project__link"
+          :target="i.link == '#' ? null : '_blank'"
+        >
           <div class="card my-3 mx-1 project__card">
             <img
               :src="'images/projects/' + i.img"
@@ -44,7 +48,7 @@ export default {
             "Aplikasi ini digunakan untuk mengelola surat masuk dan surat keluar dengan fitur meliputi kelola data surat masuk dan surat keluar, disposisi surat masuk, dan laporan surat.",
           img: "arsipsurat.png",
           tags: ["PHP", "CODEIGNITER", "BOOTSTRAP"],
-          link: "http://e-arsip-smkdh.epizy.com",
+          link: "http://demo-arsipsurat-uki.epizy.com",
         },
         {
           id: 2,
@@ -142,15 +146,23 @@ export default {
           name: "Send to WhatsApp",
           img: "send2whatsapp.png",
           tags: ["JAVASCRIPT"],
-          link: "https://send2whatsapp.now.sh/"
+          link: "https://send2whatsapp.now.sh/",
         },
         {
           id: 14,
           name: "Codepen Clone",
           img: "codepen-clone.png",
           tags: ["JAVASCRIPT", "REACTJS"],
-          link: "https://codepen-clone.vercel.app/"
-        }
+          link: "https://codepen-clone.vercel.app/",
+        },
+        {
+          id: 15,
+          name: "Cek Ongkir App Mobile",
+          img: "cek-ongkir-mobile.png",
+          tags: ["JAVASCRIPT", "REACTNATIVE"],
+          link:
+            "https://github.com/marzukiberg/Simple-Cek-Ongkir-App-React-Native-Expo-",
+        },
       ],
       projectdesc: "project-desc",
     };
@@ -178,7 +190,7 @@ export default {
 }
 .project__image {
   height: 200px;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center top;
 }
 
