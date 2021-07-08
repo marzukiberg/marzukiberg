@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../extras/sharing-web/php/css/reveal.scss"
+    ],
+    "names": [],
+    "file": "reveal.min.css"
+}

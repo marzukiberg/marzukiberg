@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>PHP Jilid 3 | uki.my.id</title>
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" id="theme" />
+    <link
+      rel="stylesheet"
+      href="plugin/highlight/monokai.css"
+      id="highlight-theme"
+    />
+    <link rel="stylesheet" href="plugin/copycode/copycode.css" />
+    <link rel="stylesheet" href="node_modules/reveal.js-menu/menu.css" />
+    <link rel="stylesheet" href="node_modules/reveal.js-toolbar/toolbar.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/reveal.js-appearance/plugin/appearance/appearance.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles/index.min.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-transition="zoom">
+          <h1 class="fade-up">Perkenalan</h1>
+          <div class="row">
+            <div class="col-6">
+              <img
+                src="dist/img/about.jpeg"
+                alt="About Me"
+                class="img-fluid img-circle"
+              />
+            </div>
+            <div class="col-6">
+              <p class="text-sm">
+                Saya <b>Marzuki</b>, akrab disapa <b>Uki</b>.
+                <br />
+                Mahasiswa Sistem Informasi di UIN SUSKA RIAU, angkatan 2017.
+                <br />Kesibukan keseharian cuma <b>ngoding</b> dan
+                <b>belajar hal baru</b>, terbuka juga untuk project web
+                development.
+              </p>
+              <a
+                href="https://uki.my.id"
+                target="_blank"
+                class="btn btn-primary text-white"
+                >Selengkapnya</a
+              >
+            </div>
+            <div class="col-12 text-center">
+              <a
+                href="https://github.com/marzukiberg/PHP-Dasar-dan-GIT"
+                target="_blank"
+                class="btn btn-primary text-white"
+                >Download Source Code PHP Jilid 3</a
+              >
+              <a
+                href="?print-pdf"
+                target="_blank"
+                class="btn btn-success text-white"
+                >Download PDF Presentasi ini</a
+              >
+            </div>
+          </div>
+        </section>
+        <section data-transition="zoom">
+          <h1 class="mb-3">PHP Jilid 3</h1>
+          <div class="text-center mb-5">
+            <ol>
+              <li class="fade-up">
+                <span>Variables Scope</span>
+              </li>
+              <li class="fade-up">
+                <span>Anonymous Function</span>
+              </li>
+              <li class="fade-up">
+                <span>Callback Function</span>
+              </li>
+              <li class="fade-up">
+                <span>Die dan var_dump()</span>
+              </li>
+            </ol>
+          </div>
+          <h2 class="mx-auto">Tools</h2>
+          <div class="d-flex justify-content-center" style="gap: 32px">
+            <div>
+              <img
+                src="https://user-images.githubusercontent.com/674621/71187801-14e60a80-2280-11ea-94c9-e56576f76baf.png"
+                alt="Visual Studio Code"
+                style="
+                  width: 200px;
+                  height: 200px;
+                  object-fit: contain;
+                  margin-bottom: -20px;
+                "
+              />
+              <p>Code Editor</p>
+            </div>
+            <div>
+              <img
+                src="https://www.apachefriends.org/images/xampp-logo-ac950edf.svg"
+                alt="XAMPP Server"
+                style="
+                  width: 200px;
+                  height: 200px;
+                  object-fit: contain;
+                  margin-bottom: -20px;
+                "
+              />
+              <p>Web Server</p>
+            </div>
+          </div>
+        </section>
+        <section data-transition="zoom">
+          <section>
+            <h1 class="fade-up mb-3">1. Variables Scope</h1>
+            <p class="text-sm">
+              <b>Scope</b> pada PHP adalah jangkauan tertentu dimana variabel
+              tersebut masih bisa digunakan/direferensikan, pada PHP sendiri
+              terdapat 3 jenis scope.
+            </p>
+            <ol>
+              <li>Local</li>
+              <li>Global</li>
+              <li>Static</li>
+            </ol>
+          </section>
+          <section>
+            <h2>Local Scope</h2>
+            <p class="text-sm">
+              Sebuah variabel yang dideklarasikan di dalam sebuah
+              <b><i>function</i></b> hanya bisa diakses pada
+              <b><i>function</i></b> tersebut.
+            </p>
+            <pre>
+              <code data-line-numbers="" data-trim="">
+                function cetakAngka() { 
+                  $x = 5; // variabel dengan scope local
+                  echo "Nilai variabel x pada fungsi adalah : $x";
+                  echo "<br>";
+                }
+                cetakAngka();
+                // Menggunakan variabel x di luar fungsi akan menghasilkan error
+                echo "Variable diluar fungsi adalah: $x";
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Global Scope</h2>
+            <p class="text-sm">
+              Sebuah variabel yang dideklarasikan di luar
+              <b><i>function</i></b> mempunyai jangkauan global dan hanya bisa
+              diakses di luar <b><i>function</i></b
+              >.
+            </p>
+            <pre>
+              <code data-line-numbers="" data-trim="">
+                $x = 5; // variabel dengan scope global
+                
+                function cetakAngka() { 
+                  // Menggunakan variabel x di dalam fungsi ini akan menghasilkan error
+                  echo "Nilai variabel x pada fungsi adalah : $x";
+                  echo "<br>";
+                }
+                cetakAngka();
+                echo "Variable diluar fungsi adalah: $x";
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Menggunakan <b>keyword global</b></h2>
+            <p class="text-sm">
+              Sederhananya <b>keyword global</b> menjadikan variable di dalam
+              <b>function</b> yang memiliki jangkauan <b>lokal</b> menjadi
+              <b>global</b>.
+            </p>
+            <pre>
+              <code data-line-numbers data-trim>
+                $x = 5; // variabel dengan scope global
+                
+                function cetakAngka() { 
+                  global $x; // membuat variabel x menjadi global dan dapat diakses pada fungsi ini
+
+                  echo "Nilai variabel x pada fungsi adalah : $x";
+                  echo "<br>";
+                }
+                cetakAngka();
+                echo "Variable diluar fungsi adalah: $x";
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Static</h2>
+            <p class="text-sm">
+              Adalah jenis variabel yang mempertahankan nilainya pada setiap
+              pemanggilan fungsi. Untuk variabel normal, nilai dari variabel
+              tersebut akan secara otomatis dihapus pada saat fungsi selesai
+              dijalankan, dan akan dibuat ulang pada saat fungsi dipanggil.
+            </p>
+            <pre>
+              <code data-line-numbers data-trim>
+                function cetakAngkaIncreament() {
+                  static $x = 0; // variabel ini nilainya dipertahankan
+                  echo $x;
+                  $x++; // disini dilakukan perubahan terhadap variabel x, yakni penambahan 1 angka
+                }
+                
+                cetakAngkaIncreament();
+                cetakAngkaIncreament();
+                cetakAngkaIncreament();
+              </code>
+            </pre>
+          </section>
+        </section>
+        <section data-transition="zoom">
+          <section>
+            <h1 class="fade-up mb-3">2. Anonymous Function</h1>
+            <p class="text-sm">
+              Adalah fungsi yang tidak memiliki nama spesifik (anonim). Contoh
+              berikut adalah pendeklarasian variabel yang isinya adalah
+              anonymous function.
+            </p>
+            <pre>
+              <code data-trim="" data-line-numbers="">
+                $cetakAngka = function(){
+                  $x = 5; // local scope variable
+                  echo $x;
+                };
+
+                $cetakAngka(); // 5
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2 class="fade-up mb-3">
+              Anonymous Function dengan argumen/parameter.
+            </h2>
+            <pre>
+              <code data-trim="" data-line-numbers="">
+                $cetakAngka = function($angka){
+                  echo $angka;
+                };
+
+                $cetakAngka(5); // 5
+                $cetakAngka(); // error: too few arguments, karena fungsi ini membutuhkan argumen
+              </code>
+            </pre>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1 class="mb-3">Callback Function</h1>
+            <p class="text-sm">
+              Adalah sebuah <b>function</b> yang dijadikan sebagian argumen pada
+              <b>function</b> lainnya.
+            </p>
+            <pre>
+              <code data-trim data-line-numbers>
+                // fungsi ini dideklarasikan untuk mengembalikan kalimat perintah (callback)
+                function perintah($kalimat){
+                    return $kalimat . "! ";
+                }
+                // fungsi ini dideklarasikan untuk mengembalikan kalimat pertanyaan (callback)
+                function tanya($kalimat){
+                    return $kalimat . "? ";
+                }
+                // menerima callback
+                function cetakKalimat($format, $kalimat){
+                    // parameter pertama kita jadikan sebagai function (menerima fungsi callback)
+                    echo $format($kalimat);
+                    echo '<br />';
+                }
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2 class="text-center mb-3">
+              Cara pemanggilan <b>callback function</b>
+            </h2>
+            <pre>
+              <code data-trim="" data-lin-numbers="">
+                cetakKalimat("perintah", "Sholat dulu yuk"); // Sholat dulu yuk!
+                // mencetak kalimat perintah dengan konsep callback
+
+                cetakKalimat("tanya", "Apakah Anda sudah sholat"); // Apakah Anda sudah sholat?
+                // mencetak kalimat tanya dengan konsep callback
+                
+                cetakKalimat("callbackTidakAda", "Callback tidak ada"); // error; call to undefined function
+                // percobaan 3 : mencetak kalimat yang callbacknya tidak didefinisikan
+              </code>
+            </pre>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1 class="mb-3">4. Die dan var_dump()</h1>
+            <p>
+              <b>Die</b> (sama dengan exit()) adalah
+              <b>builtin function</b> dari PHP yang digunakan untuk menghentikan
+              (terminate) ekseksui kode berikutnya (biasanya digunakan pada saat
+              pengembangan).
+            </p>
+            <pre>
+              <code data-trim="" data-line-numbers="">
+                echo 'Pesan ini dijalankan.';
+                echo '<br>';
+                echo 'Pesan ini masih dijalankan.';
+                die(); // menghentikan eksekusi terhadap kode berikutnya
+                echo 'Pesan ini tidak dijalankan.'; // kode ini tidak akan terkesekusi
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2 class="mb-3">Die dapat menerima parameter</h2>
+            <p>
+              <b>Die</b> dapat menerima sebuah argument/parameter berupa pesan,
+              pesan apa? yaitu pesan yang disampaikan kepada pengguna ketika die
+              dieksekusi.
+            </p>
+            <pre>
+              <code data-trim="" data-line-numbers="">
+                fopen("diare.txt", "r") or die("File tidak ditemukan."); // menampilkan error
+                echo '<br>';
+                echo 'Good job, filenya ada.'; // file ini dieksekusi jika file ditemukan pada path
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2 class="mb-3">var_dump</h2>
+            <p>
+              <b>var_dump</b> adalah fungsi yang digunakan untuk mengetahui
+              informasi detail sebuah variabel, var_dump biasa digunakan dalam
+              pengembangan dan biasa disandingkan dengan die.
+            </p>
+            <pre>
+              <code data-trim="" data-line-numbers="">
+                $angka = 5;
+                $array_angka = [1, 2, 3];
+                var_dump($angka); // int(5)
+                echo '<br>';
+                var_dump($array_angka); // array(3) { [0]=> int(1) [1]=> int(2) [2]=> int(3) }
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2 class="mb-3">
+              var_dump dapat menerima lebih dari satu variabel
+            </h2>
+            <pre>
+              <code data-trim="" data-line-numbers="">
+                $angka = 5;
+                $array_angka = [1, 2, 3];
+                $huruf = 'ABC';
+                var_dump($angka, $array_angka, $huruf); // int(5) array(3) { [0]=> int(1) [1]=> int(2) [2]=> int(3) } string(3) "ABC"
+              </code>
+            </pre>
+          </section>
+        </section>
+        <section>
+          <h1 class="mb-3">Referensi</h1>
+          <div>
+            <ol>
+              <li>PHP.NET</li>
+              <li>W3SCHOOLS.COM</li>
+              <li>DEVELOPER.MOZILLA.ORG</li>
+              <li>GOOGLE.COM</li>
+            </ol>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+    <script src="plugin/copycode/copycode.js"></script>
+    <script src="node_modules/reveal.js-menu/menu.js"></script>
+    <script src="node_modules/reveal.js-appearance/plugin/appearance/appearance.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      Reveal.configure({ pdfSeparate: false });
+      let revealConfig = {
+        hash: true,
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealNotes,
+          CopyCode,
+          RevealMenu,
+          Appearance,
+        ],
+        dependencies: [{ src: "node_modules/reveal.js-toolbar/toolbar.js" }],
+        menu: {
+          useTextContentForMissingTitles: true,
+          themes: true,
+        },
+        toolbar: {
+          position: "top",
+          fullscreen: true,
+          overview: true,
+          pause: true,
+        },
+      };
+      if (window.location.search == "?print-pdf") {
+        revealConfig = {
+          plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+          toolbar: {
+            position: "top",
+            fullscreen: false,
+            overview: false,
+            pause: false,
+          },
+        };
+      }
+      window.addEventListener("load", () => {
+        Reveal.initialize(revealConfig).then(() => {
+          if (window.location.search == "?print-pdf") {
+            return window.print();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

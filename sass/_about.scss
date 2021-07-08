@@ -1,0 +1,20 @@
+.about {
+  min-height: 100vh;
+  overflow: hidden;
+  .profile_img {
+    max-height: 320px;
+    object-fit: contain;
+    object-position: center;
+    background-color: $gray;
+    @include size(540px) {
+      max-height: 250px;
+    }
+  }
+  .desc {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .hire_btn {
+    @include btn;
+  }
+}

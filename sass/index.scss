@@ -1,0 +1,69 @@
+$gray: #f5f5f5;
+html {
+  scroll-behavior: smooth;
+}
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+.poppins {
+  font-family: "Poppins", sans-serif;
+}
+@mixin size($size) {
+  @media only screen and (max-width: $size) {
+    @content;
+  }
+}
+textarea:focus,
+textarea.form-control:focus,
+input.form-control:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+[type="text"].form-control:focus,
+[type="password"].form-control:focus,
+[type="email"].form-control:focus,
+[type="tel"].form-control:focus,
+[contenteditable].form-control:focus {
+  box-shadow: inset 0 -1px 0 #ddd;
+}
+@mixin btn {
+  background-color: white !important;
+  border: 1px solid black !important;
+  color: black !important;
+  font-family: Poppins, sans-serif;
+  font-size: 13px;
+  &:hover {
+    background-color: black !important;
+    color: white !important;
+  }
+}
+
+@mixin responsiveGrid($columns: 4) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  grid-gap: 12px;
+  @include size(1000px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include size(720px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include size(540px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+@mixin cardHoverEffect {
+  transition: 0.2s;
+  &:hover {
+    transform: scale(105%);
+  }
+}
+
+@import "navbar";
+@import "home";
+@import "about";
+@import "specializing";
+@import "portfolio";
+@import "contact";

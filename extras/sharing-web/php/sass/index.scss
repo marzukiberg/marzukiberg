@@ -1,0 +1,27 @@
+// section {
+//   @mixin underline {
+//     display: inline-block;
+//     position: relative;
+//     padding-bottom: 4px;
+//     &::after {
+//       content: "";
+//       position: absolute;
+//       bottom: 0;
+//       left: 0;
+//       width: 100%;
+//       height: 4px;
+//       background-color: rgba($color: #fff, $alpha: 0.5);
+//     }
+//   }
+//   .text-sm {
+//     font-size: 32px;
+//   }
+//   h1 {
+//     font-size: 48px !important;
+//     @include underline();
+//   }
+//   h2 {
+//     font-size: 36px !important;
+//     @include underline();
+//   }
+// }

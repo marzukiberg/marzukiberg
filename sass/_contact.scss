@@ -1,0 +1,38 @@
+.contact {
+  p {
+    font-size: 13px;
+  }
+  .icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: black;
+    margin-bottom: 12px;
+    color: white;
+    line-height: 48px;
+    font-size: 18px;
+  }
+  .app_input {
+    border-radius: 0;
+    border: 0;
+    border-bottom: 1px solid rgba($color: #000000, $alpha: 0.2);
+    padding-left: 0;
+    padding-bottom: 32px;
+    font-size: 13px;
+    font-family: "Poppins", sans-serif;
+    &:focus {
+      outline: none;
+    }
+  }
+  .app_button {
+    margin: 0 auto;
+    border: 1px solid black;
+    background-color: white;
+    font-size: 13px;
+    font-family: "Poppins", sans-serif;
+    &:hover {
+      background-color: rgba($color: #000000, $alpha: 0.8);
+      color: white;
+    }
+  }
+}

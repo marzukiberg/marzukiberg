@@ -1,0 +1,51 @@
+.home {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../public/img/beach.jpg);
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .title {
+    font-size: 75px;
+    font-weight: bold;
+    @include size(540px) {
+      font-size: 32px;
+      margin: 0 32px;
+    }
+  }
+  .social-icons {
+    display: flex;
+    gap: 32px;
+    a {
+      outline: none;
+      color: white;
+      font-size: 15px;
+    }
+  }
+  .btn-bouncing {
+    background-color: transparent;
+    border: 0;
+    outline: none;
+  }
+  .bouncing {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    outline: none !important;
+    .fa {
+      outline: none !important;
+      animation: bouncing 1s infinite alternate;
+    }
+    @keyframes bouncing {
+      from {
+        transform: translateY(-50%);
+      }
+      to {
+        transform: translateY(50%);
+      }
+    }
+  }
+}
